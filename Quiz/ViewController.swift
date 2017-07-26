@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     var questionNum:Int = 0
 
     // 質問最大数
-    let maxQuestionNum = 30
+    let maxQuestionNum = 5
 
     // 正解数
     var correctedQuestionNum:Int = 0
@@ -57,7 +57,6 @@ class ViewController: UIViewController {
         } else {
             showFailureAlert()
         }
-        self.updateQuiz()
     }
     
     @IBAction func tapButton2() {
@@ -67,7 +66,6 @@ class ViewController: UIViewController {
         } else {
             showFailureAlert()
         }
-        self.updateQuiz()
     }
     
     @IBAction func tapButton3() {
@@ -77,7 +75,6 @@ class ViewController: UIViewController {
         } else {
             showFailureAlert()
         }
-        self.updateQuiz()
     }
     
     @IBAction func tapButton4() {
@@ -87,15 +84,38 @@ class ViewController: UIViewController {
         } else {
             showFailureAlert()
         }
-        self.updateQuiz()
     }
     
     // クイズの更新
     func updateQuiz() {
         // 最大数チェック
         if questionNum >= maxQuestionNum {
+            
+//            let ud = UserDefaults.standard
+//            
+//            // userDefaultsに保存する文
+//            var result = getNowClockString() + String(maxQuestionNum) + "問中" + String(correctedQuestionNum) + "問正解"
+//            
+//            // 一度でもuserDefaultsに保存していたら
+//            if ud.array(forKey: "resultArray") != nil {
+//                var saveResultArray = ud.array(forKey: "resultArray") as! [String]
+//                saveResultArray.append(result)
+//                ud.set(saveResultArray, forKey: "resultArray")
+//                
+//            // userDefaultsのデータがない場合は新規追加
+//            } else {
+//                var saveResultArray:[String] = [result]
+//                ud.set(saveResultArray, forKey: "resultArray")
+//                ud.set(saveResultArray, forKey: "memoArray")
+//            }
+//            ud.synchronize()
+            
+            // 初期化
             questionNum = 0
             correctedQuestionNum = 0
+            
+            // ランキング画面へ
+            self.performSegue(withIdentifier: "toDetail", sender: nil)
         }
         questionNum = questionNum + 1
         
@@ -141,14 +161,13 @@ class ViewController: UIViewController {
         var message:String = "正解です！"
         if questionNum == maxQuestionNum {
             message = "\n\n" + String(maxQuestionNum) + "問中"
-                + String(correctedQuestionNum) + "問正解しました。1問目に戻ります。"
+                + String(correctedQuestionNum) + "問正解しました。"
         }
         let alert = UIAlertController(title: "正解！", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default) { (action) in
-            alert.dismiss(animated: true, completion: {
-//                self.updateQuiz()
-            })
-        }
+        let action = UIAlertAction(title: "OK", style: .default, handler: {
+            (action: UIAlertAction!) in
+            self.updateQuiz()
+        })
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
@@ -158,18 +177,24 @@ class ViewController: UIViewController {
         var message:String = "正解は" + prefArr[quiz.ansPrefCode - 1] + "です。"
         if questionNum == maxQuestionNum {
             message = "\n\n" + String(maxQuestionNum) + "問中"
-                + String(correctedQuestionNum) + "問正解しました。1問目に戻ります。"
+                + String(correctedQuestionNum) + "問正解しました。"
         }
 
         let alert = UIAlertController(title: "不正解", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default) { (action) in
-            alert.dismiss(animated: true, completion: {
-//                self.updateQuiz()
-            })
-        }
+        let action = UIAlertAction(title: "OK", style: .default, handler: {
+            (action: UIAlertAction!) in
+            self.updateQuiz()
+        })
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
     
+    
+    func getNowClockString() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd' 'HH:mm:ss"
+        let now = Date()
+        return formatter.string(from: now)
+    }
 }
 

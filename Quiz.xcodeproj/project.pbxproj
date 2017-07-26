@@ -37,7 +37,9 @@
 		AB3142061F2730EB007A2D53 /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB3141EB1F2730EB007A2D53 /* iTunesArtwork@1x.png */; };
 		AB3142071F2730EB007A2D53 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB3141EC1F2730EB007A2D53 /* iTunesArtwork@2x.png */; };
 		AB3142081F2730EB007A2D53 /* iTunesArtwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB3141ED1F2730EB007A2D53 /* iTunesArtwork@3x.png */; };
-		AB3142091F2730EB007A2D53 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AB3141EE1F2730EB007A2D53 /* README.md */; };
+		AB31420C1F28248F007A2D53 /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31420A1F28248F007A2D53 /* QuizTableViewCell.swift */; };
+		AB31420D1F28248F007A2D53 /* QuizTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB31420B1F28248F007A2D53 /* QuizTableViewCell.xib */; };
+		AB31420F1F28265A007A2D53 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB31420E1F28265A007A2D53 /* RankingViewController.swift */; };
 		AB98AAFC1F206E9B00BF8631 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98AAFB1F206E9B00BF8631 /* AppDelegate.swift */; };
 		AB98AAFE1F206E9B00BF8631 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98AAFD1F206E9B00BF8631 /* ViewController.swift */; };
 		AB98AB011F206E9B00BF8631 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB98AAFF1F206E9B00BF8631 /* Main.storyboard */; };
@@ -123,7 +125,9 @@
 		AB3141EB1F2730EB007A2D53 /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
 		AB3141EC1F2730EB007A2D53 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		AB3141ED1F2730EB007A2D53 /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@3x.png"; sourceTree = "<group>"; };
-		AB3141EE1F2730EB007A2D53 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AB31420A1F28248F007A2D53 /* QuizTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
+		AB31420B1F28248F007A2D53 /* QuizTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuizTableViewCell.xib; sourceTree = "<group>"; };
+		AB31420E1F28265A007A2D53 /* RankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		AB98AAF81F206E9B00BF8631 /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB98AAFB1F206E9B00BF8631 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB98AAFD1F206E9B00BF8631 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -207,7 +211,6 @@
 				AB3141EB1F2730EB007A2D53 /* iTunesArtwork@1x.png */,
 				AB3141EC1F2730EB007A2D53 /* iTunesArtwork@2x.png */,
 				AB3141ED1F2730EB007A2D53 /* iTunesArtwork@3x.png */,
-				AB3141EE1F2730EB007A2D53 /* README.md */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -268,8 +271,11 @@
 				AB3141CB1F2702BF007A2D53 /* Quiz.swift */,
 				AB98AAFB1F206E9B00BF8631 /* AppDelegate.swift */,
 				AB98AAFD1F206E9B00BF8631 /* ViewController.swift */,
+				AB31420E1F28265A007A2D53 /* RankingViewController.swift */,
 				AB98AB021F206E9B00BF8631 /* Assets.xcassets */,
 				AB98AAFF1F206E9B00BF8631 /* Main.storyboard */,
+				AB31420A1F28248F007A2D53 /* QuizTableViewCell.swift */,
+				AB31420B1F28248F007A2D53 /* QuizTableViewCell.xib */,
 				AB98AB041F206E9B00BF8631 /* LaunchScreen.storyboard */,
 				AB98AB071F206E9B00BF8631 /* Info.plist */,
 			);
@@ -408,6 +414,7 @@
 				AB98AB671F207BA300BF8631 /* 36.png in Resources */,
 				AB98AB661F207BA300BF8631 /* 23.png in Resources */,
 				AB3141FB1F2730EB007A2D53 /* Icon-App-60x60@1x.png in Resources */,
+				AB31420D1F28248F007A2D53 /* QuizTableViewCell.xib in Resources */,
 				AB3141F11F2730EB007A2D53 /* Icon-App-20x20@2x.png in Resources */,
 				AB98AB4A1F207BA300BF8631 /* 34.png in Resources */,
 				AB98AB061F206E9B00BF8631 /* LaunchScreen.storyboard in Resources */,
@@ -480,12 +487,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB3142091F2730EB007A2D53 /* README.md in Sources */,
+				AB31420C1F28248F007A2D53 /* QuizTableViewCell.swift in Sources */,
 				AB98AB6F1F20901400BF8631 /* pref.csv in Sources */,
 				AB98AAFE1F206E9B00BF8631 /* ViewController.swift in Sources */,
 				AB3141CC1F2702BF007A2D53 /* Quiz.swift in Sources */,
 				AB3141CE1F27089E007A2D53 /* ArrayShuffled.swift in Sources */,
 				AB98AAFC1F206E9B00BF8631 /* AppDelegate.swift in Sources */,
+				AB31420F1F28265A007A2D53 /* RankingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
