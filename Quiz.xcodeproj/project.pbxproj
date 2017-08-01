@@ -93,6 +93,7 @@
 		AB98AB6B1F207BB300BF8631 /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = AB98AB691F207BB300BF8631 /* 02.png */; };
 		AB98AB6D1F20850A00BF8631 /* 46.png in Resources */ = {isa = PBXBuildFile; fileRef = AB98AB6C1F20850A00BF8631 /* 46.png */; };
 		AB98AB6F1F20901400BF8631 /* pref.csv in Sources */ = {isa = PBXBuildFile; fileRef = AB98AB6E1F20901400BF8631 /* pref.csv */; };
+		ABB1C1461F309278006E8595 /* font_1_honokamarugo_1.1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABB1C1451F309278006E8595 /* font_1_honokamarugo_1.1.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -183,6 +184,7 @@
 		AB98AB691F207BB300BF8631 /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
 		AB98AB6C1F20850A00BF8631 /* 46.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 46.png; sourceTree = "<group>"; };
 		AB98AB6E1F20901400BF8631 /* pref.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = pref.csv; path = ../pref.csv; sourceTree = "<group>"; };
+		ABB1C1451F309278006E8595 /* font_1_honokamarugo_1.1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = font_1_honokamarugo_1.1.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 				AB31420B1F28248F007A2D53 /* QuizTableViewCell.xib */,
 				AB98AB041F206E9B00BF8631 /* LaunchScreen.storyboard */,
 				AB98AB071F206E9B00BF8631 /* Info.plist */,
+				ABB1C1451F309278006E8595 /* font_1_honokamarugo_1.1.ttf */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				AB3141D11F2728F2007A2D53 /* japan.png in Resources */,
 				AB98AB401F207BA300BF8631 /* 17.png in Resources */,
 				AB98AB6B1F207BB300BF8631 /* 02.png in Resources */,
+				ABB1C1461F309278006E8595 /* font_1_honokamarugo_1.1.ttf in Resources */,
 				AB3141FE1F2730EB007A2D53 /* Icon-App-72x72@1x.png in Resources */,
 				AB98AB461F207BA300BF8631 /* 11.png in Resources */,
 				AB98AB481F207BA300BF8631 /* 12.png in Resources */,
